@@ -1,0 +1,143 @@
+/* reset css */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+:root {
+  --nav-color: rgb(240, 229, 128);
+  --nav-length: 58px;
+  --font-size: 16px;
+}
+
+/* navbar */
+#navbar {
+  box-shadow: 0 1px 2px rgb(248, 222, 191);
+  padding: 10px 20px;
+  background-color: var(--nav-color) !important;
+}
+
+#navbar button:hover,
+#navbar button:active,
+#navbar button:focus {
+  background-color: rgb(255, 240, 222);
+  border: 1px;
+}
+
+.navbar a {
+  text-transform: capitalize;
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 4px 6px;
+  font-weight: 400;
+}
+.navbar a:hover,
+.navbar a:active {
+  background-color: rgb(255, 240, 222);
+}
+
+/* content */
+/* all*/
+.view{
+ width:100%;
+}
+.heading{
+color: white;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* main*/
+#main {
+  background-image: url(../assets/images/world_map.jpg);
+  background-repeat: no-repeat;
+  /* filter: blur(8px); */
+  background-position: center;
+  color: white;
+  padding-top: var(--nav-length);
+  display: flex;
+  flex-direction: column;
+}
+
+/* form */
+#main .form-class {
+  background-color: var(--nav-color);
+  padding: 15px 20px;
+  color: black;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.btn {
+  width: 100%;
+}
+.form-area {
+  padding:50px;
+}
+.form-heading {
+  margin-bottom: 9px;
+}
+.form-control:focus {
+  border-color: #c1c1c1;
+  box-shadow: 0 0 5px #c1c1c1;
+  outline: none;
+}
+.form-check-input:focus {
+  border-color: #c1c1c1;
+  box-shadow: 0 0 5px #c1c1c1;
+  outline: none;
+}
+.btn:focus {
+  box-shadow: 0 0 5px #c1c1c1;
+}
+#main .form-class label {
+  margin-bottom: 0px;
+}
+.message .intro-text {
+margin: 10px;
+  text-align: left;
+  padding: 8px;
+}
+/* about */
+#aboutUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(17, 209, 75);
+}
+.card{
+  padding:5px;
+  margin: 0px 8px;
+}
+.card-title {
+  text-align: center;
+}
+.card:hover{
+  width: 20rem;
+ box-shadow: rgb(224, 10, 10);
+}
+/* findStore */
+#findStore {
+  width: 100%;
+  background-color: rgb(36, 29, 231);
+}
+/* FAQs */
+#FAQs {
+  width: 100%;
+  background-color: rgb(240, 29, 89);
+}
+/* shipNow */
+#shipNow {
+  width: 100%;
+  background-color: rgb(243, 16, 179);
+}
+/* footer */
+#footer {
+  height: 40vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
