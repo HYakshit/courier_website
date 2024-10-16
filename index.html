@@ -42,10 +42,10 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="Css/style.css" />
-    <!-- js -->
-    <script src="Js/logic.js"></script>
+    <!-- javascript -->
+    <script src="Js/script.js"></script>
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- nav -->
     <header>
       <nav
@@ -83,19 +83,29 @@
     <div class="content">
       <!-- main -->
       <section class="view" id="main">
-        <div class="row h-100 align-items-center">
+        <div class="row align-items-center">
           <!-- form container -->
           <div class="col-12 col-md-6 col-lg-6">
             <div class="form-area">
               <!-- form -->
               <div class="heading text-center">
-                <h3>Get a call<span id="exclamation">!</span></h3>
+                <h2>Get a call<span id="exclamation">!</span></h2>
               </div>
               <div class="form-class">
                 <form
                   action="https://formsubmit.co/superandsafecourier@gmail.com"
                   method="POST"
                 >
+                  <!-- submit success -->
+                  <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> -->
+                  <!-- subject -->
+                  <input type="hidden" name="_subject" value="Lead" />
+                  <!-- cc -->
+                  <input
+                    type="hidden"
+                    name="_cc"
+                    value="akshit62832@gmail.com"
+                  />
                   <div class="mb-3">
                     <!-- capcha disable -->
                     <input type="hidden" name="_captcha" value="false" />
@@ -179,6 +189,7 @@
         <div class="heading text-center"><h2>We meet your needs for</h2></div>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-3">
+            <div class="card-area"></div>
             <div class="card" style="width: 18rem">
               <img
                 src="./assets/images/parcel_handover.jpg"
@@ -265,11 +276,12 @@
             <div class="col-12 col-md-6 col-lg-6">
               <!-- Contact Info -->
               <div class="contact mb-3 text-center">
-                <h5 class="text-uppercase heading">Contact Us</h5>
+                <h2 class="text-uppercase sub-heading">Contact Us</h2>
                 <ul class="list-unstyled d-flex">
                   <li>
                     <a href="tel:+9877049989" class="text-decoration-none">
-                      <i class="fa fa-phone me-1"></i> +91 9877049989
+                      <i class="fa fa-phone me-1"></i>
+                      <h6>+91 9877049989</h6>
                     </a>
                   </li>
                   <li>
@@ -278,7 +290,7 @@
                       class="text-decoration-none"
                     >
                       <i class="fa fa-envelope me-1"></i>
-                      superandsafecourier@gmail.com
+                      <h6>superandsafecourier@gmail.com</h6>
                     </a>
                   </li>
                 </ul>
@@ -294,7 +306,215 @@
         </div>
       </section>
       <!-- shipNow -->
-      <!-- <section class="view" id="shipNow">h</section> -->
+      <section class="view" id="shipNow">
+        <div class="heading text-center">
+          <h2>Enter details to ship parcel</h2>
+        </div>
+        <div class="row">
+          <!-- national -->
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="sub-heading text-center">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4>National</h4>
+            </div>
+            <div class="form-class">
+              <form
+                action="https://formsubmit.co/superandsafecourier@gmail.com"
+                method="POST"
+              >
+                <!-- submit success -->
+                <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> -->
+                <!-- subject -->
+                <input type="hidden" name="_subject" value="National Courier" />
+                <!-- cc -->
+                <!-- <input type="hidden" name="_cc" value="akshit62832@gmail.com" /> -->
+                <div class="mb-3">
+                  <!-- capcha disable -->
+                  <input type="hidden" name="_captcha" value="false" />
+                  <!--name-->
+                  <div class="mb-3">
+                    <label for="name" class="form-label"
+                      >Enter Name <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Name"
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <!-- number -->
+                    <label for="phoneNumberInput" class="form-label"
+                      >Your Phone Number <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="15"
+                      name="phone number"
+                      type="number"
+                      id="phoneNumberInput"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <!-- parcel orign -->
+                  <div class="mb-3">
+                    <label for="parcelOrign" class="form-label"
+                      >Parcel orign <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel orign"
+                      type="text"
+                      class="form-control"
+                      id="parcelOrign"
+                      required
+                    />
+                  </div>
+                  <!-- parcel destination -->
+                  <div class="mb-3">
+                    <label for="parceldestination" class="form-label"
+                      >Parcel destination <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel destination"
+                      type="text"
+                      class="form-control"
+                      id="parceldestination"
+                      required
+                    />
+                  </div>
+                  <!-- parcel weight -->
+                  <div class="mb-3">
+                    <label for="parcelweight" class="form-label"
+                      >parcel weight in kg</label
+                    >
+                    <input
+                      maxlength="10"
+                      name="Parcel destination"
+                      type="number"
+                      class="form-control"
+                      id="parcelweight"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Submit <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- International -->
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="sub-heading text-center">
+              <i class="fa-solid fa-globe"></i>
+              <h4>International</h4>
+            </div>
+            <div class="form-class">
+              <form
+                action="https://formsubmit.co/superandsafecourier@gmail.com"
+                method="POST"
+              >
+                <!-- submit success -->
+                <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> -->
+                <!-- subject -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="International Courier"
+                />
+                <!-- cc -->
+                <!-- <input type="hidden" name="_cc" value="akshit62832@gmail.com" /> -->
+                <div class="mb-3">
+                  <!-- capcha disable -->
+                  <input type="hidden" name="_captcha" value="false" />
+                  <!--name-->
+                  <div class="mb-3">
+                    <label for="name" class="form-label"
+                      >Enter name <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Name"
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <!-- number -->
+                    <label for="phoneNumberInput" class="form-label"
+                      >Your phone number <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="15"
+                      name="phone number"
+                      type="number"
+                      id="phoneNumberInput"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <!-- parcel orign -->
+                  <div class="mb-3">
+                    <label for="parcelOrign" class="form-label"
+                      >Parcel orign <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel orign"
+                      type="text"
+                      class="form-control"
+                      id="parcelOrign"
+                      required
+                    />
+                  </div>
+                  <!-- parcel destination -->
+                  <div class="mb-3">
+                    <label for="parceldestination" class="form-label"
+                      >Destination country<span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel destination"
+                      type="text"
+                      class="form-control"
+                      id="parceldestination"
+                      required
+                    />
+                  </div>
+                  <!-- parcel weight -->
+                  <div class="mb-3">
+                    <label for="parcelweight" class="form-label"
+                      >Parcel weight in kg</label
+                    >
+                    <input
+                      maxlength="10"
+                      name="Parcel destination"
+                      type="number"
+                      class="form-control"
+                      id="parcelweight"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Submit <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- FAQs -->
       <section class="view" id="FAQs">
         <div class="faq container mt-5">

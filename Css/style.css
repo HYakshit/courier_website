@@ -10,13 +10,19 @@
 :root {
   --nav-color: rgb(234 194 155);
   --nav-color-focus: rgb(238, 201, 163);
-  --grey-color: rgb(245, 245, 245);
-  --nav-length: 58px;
+  --grey-color: rgb(250, 250, 250);
+  --nav-length: 59.6px;
   --font-size: 16px;
+  --sub-heading: rgb(215 55 55);
 }
 /* common */
+.content {
+  margin-top: var(--nav-length);
+}
 .view {
   width: 100%;
+  padding: 12px;
+  border-bottom: 0.5px solid black;
 }
 .contact {
   color: black;
@@ -25,6 +31,9 @@
   justify-content: center;
 }
 .contact a {
+  color: black;
+}
+.contact a h6 {
   color: black;
   margin: 0px 5px;
 }
@@ -48,6 +57,17 @@
   font-weight: 450;
   background-color: var(--nav-color-focus);
   box-shadow: 0 0 5px #c1c1c1;
+}
+label {
+  text-transform: capitalize;
+}
+.sub-heading {
+  color: var(--sub-heading);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /* navbar */
 #navbar {
@@ -84,11 +104,8 @@
   /* filter: blur(8px); */
   background-position: center;
   color: white;
-  padding-top: var(--nav-length);
-  display: flex;
-  flex-direction: column;
 }
-#main .form-class {
+.form-class {
   background-color: rgb(253, 253, 253);
   box-shadow: rgb(210, 210, 210);
   padding: 15px 20px;
@@ -97,22 +114,14 @@
   border-radius: 10px;
 }
 .form-area {
-  padding: 50px;
-}
-.form-heading {
-  margin-bottom: 9px;
+  max-width: 550px;
 }
 .form-control:focus {
   border-color: #c1c1c1;
-  box-shadow: 0 0 5px #c1c1c1;
+  box-shadow: 2px 2px 5px #c1c1c1;
   outline: none;
 }
-.form-check-input:focus {
-  border-color: #c1c1c1;
-  box-shadow: 0 0 5px #c1c1c1;
-  outline: none;
-}
-#main .form-class label {
+.form-class label {
   margin-bottom: 0px;
 }
 .intro-text {
@@ -136,10 +145,6 @@
 .card-title {
   text-align: center;
 }
-.card:hover {
-  width: 20rem;
-  box-shadow: rgb(224, 10, 10);
-}
 /* findStore */
 #findStore {
   width: 100%;
@@ -154,8 +159,6 @@
 }
 
 /* FAQs */
-#FAQs {
-}
 .faq {
   margin-bottom: 6px;
   height: 100vh;
@@ -172,7 +175,14 @@
 }
 /* shipNow */
 #shipNow {
-  background-color: rgb(243, 16, 179);
+  background-color: var(--grey-color);
+}
+#shipNow .form-class {
+  padding: 40px;
+}
+#shipNow .heading {
+  padding: 0px;
+  margin-top: 25px;
 }
 /* footer */
 #footer {
