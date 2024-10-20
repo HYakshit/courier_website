@@ -86,92 +86,86 @@
         <div class="row align-items-center">
           <!-- form container -->
           <div class="col-12 col-md-6 col-lg-6">
-            <div class="form-area">
-              <!-- form -->
-              <div class="heading text-center">
-                <h2>Get a call<span id="exclamation">!</span></h2>
-              </div>
-              <div class="form-class">
-                <form
-                  action="https://formsubmit.co/superandsafecourier@gmail.com"
-                  method="POST"
-                >
-                  <!-- submit success -->
-                  <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> -->
-                  <!-- subject -->
-                  <input type="hidden" name="_subject" value="Lead" />
-                  <!-- cc -->
-                  <input
-                    type="hidden"
-                    name="_cc"
-                    value="akshit62832@gmail.com"
-                  />
+            <!-- form -->
+            <div class="heading text-center">
+              <h2>Get a call<span id="exclamation">!</span></h2>
+            </div>
+            <div class="form-class">
+              <form
+                action="https://formsubmit.co/superandsafecourier@gmail.com"
+                method="POST"
+              >
+                <!-- submit success -->
+                <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> -->
+                <!-- subject -->
+                <input type="hidden" name="_subject" value="Lead" />
+                <!-- cc -->
+                <input type="hidden" name="_cc" value="akshit62832@gmail.com" />
+                <div class="mb-3">
+                  <!-- capcha disable -->
+                  <input type="hidden" name="_captcha" value="false" />
+                  <!--name-->
                   <div class="mb-3">
-                    <!-- capcha disable -->
-                    <input type="hidden" name="_captcha" value="false" />
-                    <!--name-->
-                    <div class="mb-3">
-                      <label for="name" class="form-label"
-                        >Enter Name <span class="mandate">*</span></label
-                      >
-                      <input
-                        maxlength="20"
-                        name="Name"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <!-- number -->
-                      <label for="phoneNumberInput" class="form-label"
-                        >Your Phone Number <span class="mandate">*</span></label
-                      >
-                      <input
-                        maxlength="15"
-                        name="phone number"
-                        type="number"
-                        id="phoneNumberInput"
-                        class="form-control"
-                        required
-                      />
-                    </div>
+                    <label for="name" class="form-label"
+                      >Enter Name <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Name"
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <!-- number -->
+                    <label for="phoneNumberInput" class="form-label"
+                      >Your Phone Number <span class="mandate">*</span></label
+                    >
+                    <input
+                      maxlength="15"
+                      name="phone number"
+                      type="number"
+                      id="phoneNumberInput"
+                      class="form-control"
+                      required
+                    />
+                  </div>
 
-                    <!-- parcel orign -->
-                    <div class="mb-3">
-                      <label for="parcelOrign" class="form-label"
-                        >Parcel orign</label
-                      >
-                      <input
-                        maxlength="20"
-                        name="Parcel orign"
-                        type="text"
-                        class="form-control"
-                        id="parcelOrign"
-                      />
-                    </div>
-                    <!-- parcel destination -->
-                    <div class="mb-3">
-                      <label for="parceldestination" class="form-label"
-                        >Parcel destination</label
-                      >
-                      <input
-                        maxlength="20"
-                        name="Parcel destination"
-                        type="text"
-                        class="form-control"
-                        id="parceldestination"
-                      />
-                    </div>
+                  <!-- parcel orign -->
+                  <div class="mb-3">
+                    <label for="parcelOrign" class="form-label"
+                      >Parcel orign</label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel orign"
+                      type="text"
+                      class="form-control"
+                      id="parcelOrign"
+                    />
                   </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">
-                      Submit <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+                  <!-- parcel destination -->
+                  <div class="mb-3">
+                    <label for="parceldestination" class="form-label"
+                      >Parcel destination</label
+                    >
+                    <input
+                      maxlength="20"
+                      name="Parcel destination"
+                      type="text"
+                      class="form-control"
+                      id="parceldestination"
+                    />
                   </div>
-                </form>
-              </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Submit <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           <!-- intro container -->
@@ -460,7 +454,7 @@
                   <div class="mb-3">
                     <!-- number -->
                     <label for="phoneNumberInput" class="form-label"
-                      >Your phone number <span class="mandate">*</span></label
+                      >Your phone number <span class="mandate city">*</span></label
                     >
                     <input
                       maxlength="15"
@@ -475,7 +469,7 @@
                   <!-- parcel orign -->
                   <div class="mb-3">
                     <label for="parcelOrign" class="form-label"
-                      >Parcel orign <span class="mandate">*</span></label
+                      >Parcel orign <span class="mandate country">*</span></label
                     >
                     <input
                       maxlength="20"
@@ -489,7 +483,7 @@
                   <!-- parcel destination -->
                   <div class="mb-3">
                     <label for="parceldestination" class="form-label"
-                      >Destination country<span class="mandate">*</span></label
+                      >Destination country<span class="mandate state">*</span></label
                     >
                     <input
                       maxlength="20"
