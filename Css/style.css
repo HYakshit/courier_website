@@ -13,7 +13,7 @@
   --grey-color: rgb(250, 250, 250);
   --nav-length: 59.6px;
   --font-size: 16px;
-  --sub-heading: rgb(215 55 55);
+  --sub-heading: rgb(206, 71, 71);
 }
 /* common */
 .content {
@@ -145,11 +145,14 @@ input::-webkit-inner-spin-button {
 .card-title {
   text-align: center;
 }
-/* findStore */
-#findStore {
+/* contactUs */
+.map{
+  flex-direction:column;
+}
+#contactUs {
   width: 100%;
 }
-#findStore .row {
+#contactUs .row {
   align-items: center;
 }
 .map {
@@ -166,8 +169,16 @@ input::-webkit-inner-spin-button {
 .accordion-item {
   border: none;
 }
+.accordion-header:focus,.accordion-header:active{
+background-color:white;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: inherit;
+  box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
 .accordion-body {
-  background-color: rgb(249, 249, 249);
+  background-color: var(--grey-color);
 }
 .accordion-item:hover,
 .accordion-item:focus {
